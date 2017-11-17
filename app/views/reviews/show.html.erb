@@ -1,11 +1,14 @@
 <h1><%= @review.author %></h1>
 
-<% if @reviews.any? %>
-  <h4>Here are the authors for this review:</h4>
+<% if @rproduct.reviews.any? %>
+  <h4>Here is the author for this review:</h4>
 
   <ul>
-    <% @reviews.authors.each do |author| %>
+    <% @product.reviews.each do |author| %>
       <li>
+        <%= review.author %>
+        <%= review.content_body %>
+        <%= review.rating %>
         <%= link_to review.author, review_author_path(@review, author) %> |
         <%= link_to "Edit", edit_review_author_path(@review, author) %> |
         <%= link_to "Delete", review_author_path(@review, author),
