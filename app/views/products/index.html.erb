@@ -1,0 +1,12 @@
+<h1>Our Complete List of Products</h1>
+<h3>Search by Reviews:</h3>
+
+<ul>
+  <% @products.each do |product| %>
+    <li><%= link_to product.name, product_path(product) %></li>
+  <% end %>
+</ul>
+
+<hr>
+
+<% link_to "New Product", new_product_path %>
