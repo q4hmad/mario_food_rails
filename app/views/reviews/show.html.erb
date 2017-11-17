@@ -1,0 +1,26 @@
+<h1><%= @review.author %></h1>
+
+<% if @reviews.any? %>
+  <h4>Here are the authors for this review:</h4>
+
+  <ul>
+    <% @reviews.authors.each do |author| %>
+      <li>
+        <%= link_to review.author, review_author_path(@review, author) %> |
+        <%= link_to "Edit", edit_review_author_path(@review, author) %> |
+        <%= link_to "Delete", review_author_path(@review, author),
+                                 :data => {:confirm => "Are you sure?",
+                                                :method => "delete"} %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no reviews yet!</p>
+<% end %>
+
+<p><%= link_to "Add a review", new_review_author_path(@review) %></p>
+<p><%= link_to "Delete Product", review_path(@review),
+                        :data => {:confirm => "Are you sure?",
+                                       :method => "delete"} %></p>
+
+<p><%= link_to "Return to categories", book_path(@review.product) %></p>
