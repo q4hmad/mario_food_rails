@@ -11,19 +11,16 @@
         <h4>Recent reviews for this product:</h4>
         <h5><% @product.reviews.each do |review| %></h5>
         <p><%= review.content_body %></p>
-        <p><%= review.author %></p>
-        <p><%= review.rating %></p>
+        <p>Author:<%= review.author %></p>
+        <p>Rating: <%= review.rating %></p>
 
         <% end %>
       <% end %>
       </div>
 
-
-
-
-
-
-      <%= link_to "Edit Product", edit_product_path(@product) %>
+     <div class="center"><%= link_to "Add Review", new_product_review_path(@product)%></div>
+     <br>
+     <%= link_to "Edit Product", edit_product_path(@product) %>
       <br>
       <%= link_to "Delete", product_path(@product),
       :data => {:confirm => "are you sure?", :method => "delete"} %>

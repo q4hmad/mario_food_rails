@@ -64,8 +64,12 @@ li {
 }
 .column2 {
   text-align: center;
-
 }
+.center {
+  text-align: center;
+  font-size: 25px;
+}
+
 
 body {
  background: url("https://images.unsplash.com/photo-1472141521881-95d0e87e2e39?auto=format&fit=crop&w=1052&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D") ;
