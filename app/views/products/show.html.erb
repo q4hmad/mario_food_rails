@@ -18,9 +18,9 @@
       <% end %>
       </div>
 
-     <div class="center"><%= link_to "Add Review", new_product_review_path(@product)%></div>
+     <div class="center"><%= link_to "Write a Review", new_product_review_path(@product)%></div>
      <br>
-     <%= link_to "Edit Product", edit_product_path(@product) %>
+     <%= link_to "Update Product", edit_product_path(@product) %>
       <br>
       <%= link_to "Delete", product_path(@product),
       :data => {:confirm => "are you sure?", :method => "delete"} %>

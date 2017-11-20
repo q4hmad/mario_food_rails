@@ -6,7 +6,7 @@ describe "the add a product process" do
    click_link 'Add a Product'
    fill_in 'Name', :with => "Haleem Masala"
    fill_in 'Country of origin', :with => "Pakistan"
-   fill_in 'Cost', :with => "4"
+   fill_in 'Cost', :with => "40"
    click_on 'Create Product'
  end
 
