@@ -19,7 +19,7 @@ $ rails s to start the server, then navigate to localhost:3000 in your browser.
 User Stories
 
 As a user, I want to...
-View a landing page with basic information about the company, the three most recently added products, the product with the most reviews.
+View a landing page with basic information about the company, the three most recently added products, the product with the most reviews, and products made in the United States.
 View a list of products.
 Add, update, and delete products.
 Click on an individual product to see details.
