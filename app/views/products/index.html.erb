@@ -1,12 +1,42 @@
-<h1>Our Complete List of Products</h1>
-<h3>Search by Reviews:</h3>
+<h1>Welcome to Mario Foods</h1>
+<h3>Adding spice to life since 1996</h3>
 
-<ul>
-  <% @products.each do |product| %>
-    <li><%= link_to product.name, product_path(product) %></li>
-  <% end %>
-</ul>
+
+<div>
+  <h3>Products with the most Reviews:</h3>
+    <ul class="columns">
+      <% @products.most_reviews.each do |product| %>
+        <li><%= link_to product.name, product_path(product) %></li>
+      <% end %>
+   </ul>
+</div>
+
+<div>
+<h3>Recent additions to our offerings:</h3>
+    <ul class="columns">
+      <% @products.most_recent.each do |product| %>
+        <li><%= link_to product.name, product_path(product) %></li>
+      <% end %>
+   </ul>
+</div>
+<div>
+<h3>Spices grown in the USA:</h3>
+    <ul class="columns">
+      <% @products_by_origin.each do |product| %>
+        <li><%= link_to product.name, product_path(product) %></li>
+      <% end %>
+   </ul>
+</div>
+
+
+
+
+
+
+
+
+<p><%= link_to "Add a Product", new_product_path %></p>
 
 <hr>
 
-<% link_to "New Product", new_product_path %>
+<!-- <h1><% link_to "New Product", new_product_path %></h1> -->

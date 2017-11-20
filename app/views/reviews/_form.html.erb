@@ -8,6 +8,6 @@
   <%= f.text_field :content_body %>
 
   <%= f.label :rating %>
-  <%= f.text_field :rating %>
+  <%= f.number_field(:rating, in: 1..5) %>
   <p><%= f.submit %></p>
 <% end %>

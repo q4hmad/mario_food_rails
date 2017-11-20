@@ -8,17 +8,23 @@
 Product.destroy_all
 Review.destroy_all
 
-50.times do |index|
-  Product.create!(name: Faker::Commerce.product_name,
+40.times do |index|
+  product = Product.create!(name: Faker::Food.spice,
                   cost: Faker::Commerce.price,
                   country_of_origin: Faker::Address.country)
 end
 
-250.times do |index|
-  Review.create!(author: Faker::Name.name_with_middle,
-                 content_body: Faker::Seinfeld.quote,
+10.times do
+  Product.create!(name: Faker::Food.spice,
+                  cost: Faker::Commerce.price,
+                  country_of_origin: "USA")
+end
+    p "Created #{Product.count} products"
+
+    250.times do |index|
+    Review.create!(author: Faker::Name.name_with_middle,
+                 content_body: Faker::Lorem.sentence(20, false, 0).chop,
                  rating: Faker::Number.between(1,5),
                  product_id: Faker::Number.between(Product.first.id, Product.last.id))
-end
-
-                 p "Created #{Product.count} products and reviews"
+            end
+        p "Created #{Review.count} reviews"

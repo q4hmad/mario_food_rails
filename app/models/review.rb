@@ -5,6 +5,6 @@ class Review < ActiveRecord::Base
   validates :content_body, :presence => true
   validates_length_of :content_body, :in => 50..250, :allow_nil => true
 
-  
+
 
 end
