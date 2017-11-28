@@ -2,7 +2,8 @@ class ProductsController < ApplicationController
   def index
     @products = Product.all
     @products_by_origin = Product.country
-    # @productsR = Product.most_reviews
+    @products_most_reviews = Product.most_reviews
+    @products_most_recent = Product.most_recent# @productsR = Product.most_reviews
   end
 
   def show
